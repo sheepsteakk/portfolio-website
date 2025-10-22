@@ -133,26 +133,26 @@ export default function Portfolio() {
           className="relative z-10 max-w-5xl mx-auto px-6 text-center"
         >
           {/* Title */}
-          <h1 className="text-[clamp(2.25rem,8vw,5.5rem)] md:text-8xl leading-[1.05] tracking-tight font-extrabold mb-4 text-transparent bg-clip-text bg-[linear-gradient(90deg,#1e3a8a_0%,#1d4ed8_50%,#5b21b6_100%)]">
+          <h1 className="text-6xl md:text-8xl font-extrabold mb-6 text-transparent bg-clip-text bg-[linear-gradient(90deg,#1e3a8a_0%,#1d4ed8_50%,#5b21b6_100%)]">
             AI Student & Developer
           </h1>
-          <p className="text-[clamp(1rem,2.8vw,1.25rem)] text-gray-600 mb-8 max-w-2xl mx-auto px-2">
+          <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Turning complex data into simple, intelligent solutions that drive meaningful impact.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center px-4">
+          <div className="flex gap-4 justify-center">
             <Button
               size="lg"
-              className="w-full sm:w-auto px-8 rounded-xl shadow-sm bg-[linear-gradient(90deg,#2563eb_0%,#7c3aed_100%)] hover:opacity-90"
+              className="px-8 rounded-xl shadow-sm bg-[linear-gradient(90deg,#2563eb_0%,#7c3aed_100%)] hover:opacity-90"
               onClick={() => scrollToSection("projects")}
             >
               View My Projects
             </Button>
             {/* Button text + link */}
-            <a href="/HongZhenYing_Resume.pdf" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+            <a href="/HongZhenYing_Resume.pdf" target="_blank" rel="noopener noreferrer">
               <Button
                 size="lg"
                 variant="outline"
-                className="w-full sm:w-auto px-8 rounded-xl bg-white border border-gray-200 hover:bg-gray-50"
+                className="px-8 rounded-xl bg-white border border-gray-200 hover:bg-gray-50"
               >
                 Download Resume
               </Button>
@@ -200,7 +200,7 @@ export default function Portfolio() {
                   className="block w-full focus:outline-none focus:ring-0 focus-visible:ring-0"
                 >
                   <Card className="group flex flex-col h-full overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-transparent">
-                    <div className="relative h-48 md:h-64 overflow-hidden">
+                    <div className="relative h-64 overflow-hidden">
                       <img
                         src={project.image}
                         alt={project.title}
@@ -241,21 +241,21 @@ export default function Portfolio() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-[clamp(1.75rem,6vw,3rem)] font-extrabold mb-4">About Me</h2>
+              <h2 className="text-5xl font-extrabold mb-6">About Me</h2>
 
-              <p className="text-lg leading-[1.7] text-gray-600 mb-6">
+              <p className="text-lg text-gray-600 mb-6">
                 I’m Zhen Ying, an Applied AI student driven by curiosity about
                 how machines learn, reason, and create.
               </p>
 
-              <p className="text-lg leading-[1.7] text-gray-600 mb-6">
+              <p className="text-lg text-gray-600 mb-6">
                 My interests lie in building intelligent systems that combine
                 precision with creativity, from neural networks that interpret
                 patterns to natural language models that understand context, and
                 computer vision systems that perceive the world as we do.
               </p>
 
-              <p className="text-lg leading-[1.7] text-gray-600 mb-8">
+              <p className="text-lg text-gray-600 mb-8">
                 To me, artificial intelligence is more than technology. It is
                 the art of transforming data into understanding. Every algorithm
                 tells a story, and I’m here to learn how to write it beautifully.
@@ -349,16 +349,16 @@ export default function Portfolio() {
             <p className="text-xl text-gray-600 mb-12">
               Have a project in mind? I'd love to hear about it.
             </p>
-            <Card className="p-6 sm:p-12 bg-white shadow-xl border border-gray-100">
+            <Card className="p-12 bg-white shadow-xl border border-gray-100">
               <div className="space-y-6">
-                <div className="flex items-center justify-center gap-3 text-base sm:text-2xl font-medium break-all sm:break-normal px-4">
+                <div className="flex items-center justify-center gap-3 text-2xl font-medium">
                   <Mail className="w-6 h-6 text-blue-600" />
                   2300185B@student.tp.edu.sg
                 </div>
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center px-4">
+                <div className="flex gap-4 justify-center">
                   <Button
                     size="lg"
-                    className="w-full sm:w-auto px-8 rounded-xl bg-[linear-gradient(90deg,#2563eb_0%,#7c3aed_100%)] hover:opacity-90"
+                    className="px-8 rounded-xl bg-[linear-gradient(90deg,#2563eb_0%,#7c3aed_100%)] hover:opacity-90"
                     onClick={() =>
                       (window.location.href =
                         "mailto:2300185B@student.tp.edu.sg")
@@ -370,7 +370,7 @@ export default function Portfolio() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="w-full sm:w-auto px-8 rounded-xl"
+                    className="px-8 rounded-xl"
                     onClick={() => window.open(CALENDLY_URL, "_blank")}
                   >
                     Schedule Call
