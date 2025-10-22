@@ -17,6 +17,8 @@ import {
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState("home");
 
+  const CALENDLY_URL = "https://calendly.com/2300185b-student/30min";
+
   const { scrollY } = useScroll();
   const heroOpacity = useTransform(scrollY, [0, 600], [1, 0], { clamp: true });
   const heroY = useTransform(scrollY, [0, 600], [0, 100], { clamp: true });
@@ -130,7 +132,7 @@ export default function Portfolio() {
           style={{ opacity: heroOpacity, y: heroY }}
           className="relative z-10 max-w-5xl mx-auto px-6 text-center"
         >
-          {/* CHANGED: Title */}
+          {/* Title */}
           <h1 className="text-6xl md:text-8xl font-extrabold mb-6 text-transparent bg-clip-text bg-[linear-gradient(90deg,#1e3a8a_0%,#1d4ed8_50%,#5b21b6_100%)]">
             AI Student & Developer
           </h1>
@@ -145,7 +147,7 @@ export default function Portfolio() {
             >
               View My Projects
             </Button>
-            {/* CHANGED: Button text + link */}
+            {/* Button text + link */}
             <a href="/HongZhenYing_Resume.pdf" target="_blank" rel="noopener noreferrer">
               <Button
                 size="lg"
@@ -267,7 +269,7 @@ export default function Portfolio() {
                   asChild
                 >
                   <a
-                    href="https://github.com/your-handle"
+                    href="https://github.com/sheepsteakk"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="GitHub"
@@ -284,7 +286,7 @@ export default function Portfolio() {
                   asChild
                 >
                   <a
-                    href="https://www.linkedin.com/in/your-handle"
+                    href="https://www.linkedin.com/in/zhen-ying-hong-3ba127281"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="LinkedIn"
@@ -369,6 +371,7 @@ export default function Portfolio() {
                     size="lg"
                     variant="outline"
                     className="px-8 rounded-xl"
+                    onClick={() => window.open(CALENDLY_URL, "_blank")}
                   >
                     Schedule Call
                   </Button>
