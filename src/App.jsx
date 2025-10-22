@@ -147,8 +147,13 @@ export default function Portfolio() {
             >
               View My Projects
             </Button>
-            {/* Button text + link */}
-            <a href="/HongZhenYing_Resume.pdf" target="_blank" rel="noopener noreferrer">
+
+            {/* Resume link fixed for GitHub Pages */}
+            <a
+              href={`${import.meta.env.BASE_URL}HongZhenYing_Resume.pdf`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 size="lg"
                 variant="outline"
